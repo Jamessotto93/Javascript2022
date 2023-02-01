@@ -1,0 +1,100 @@
+@use '../abstracts/index' as abs;
+
+.section__swap {
+    position: relative;
+
+    width: 100%;
+    height: calc(100vh - 7rem);
+
+    .wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: inherit;
+        padding: 4rem 0;
+        gap: 4rem;
+        
+        h2 {
+            font-size: 3rem;
+            margin: 2.5rem;
+            position: relative;
+
+            text-align: center;
+        }
+
+        .swapContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2.5rem;
+
+            padding: 3rem;
+            width: max-content;
+            margin-bottom: auto;
+            height: max-content;
+            background-color: abs.color('main-blue');
+            border-radius: 2rem;
+        
+            font-size: 1.6rem;
+
+            div {
+                display: flex;
+                flex-direction: column;
+
+                width: 100%;
+                gap: 1rem;
+
+                select, input {
+                    padding: .5rem;
+                    border-radius: 1rem;
+                    color: abs.color('main-blue');
+                    text-align: center;
+
+                    &:focus-visible {
+                        outline: 0;
+                    }
+
+                    &:hover {
+                        outline: .1rem solid abs.color('pink-detail');
+                    }
+                }
+            }
+
+            .swapBtn {
+                position: relative;
+                width: max-content;
+                border-radius: 2rem;
+                padding: 1rem 1.5rem;
+                background-color: abs.color('pink-detail');
+
+                color: abs.color('plainwhite');
+                -webkit-text-stroke: .03rem abs.color('background');
+
+                box-shadow: 0 .4rem 0 0 darken(abs.color('pink-detail'), 30%);
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: darken(abs.color('pink-detail'),5%);
+
+                    color: abs.color('main-blue');
+                }
+
+                &:active {
+                    top:.4rem;
+                    box-shadow: none;
+                }
+
+                &.swapOff {
+                    box-shadow: none;
+                    color: darken(abs.color('altgrey'), 40%);
+                    border: 0.2rem solid darken(abs.color('altgrey'), 40%);    
+                    background-color: abs.color('altgrey');
+                    cursor: auto;
+                    top:.4rem;
+                }
+            }
+        }
+    }       
+}
