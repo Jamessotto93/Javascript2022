@@ -17,7 +17,6 @@ Crear una aplicación web empleando JavaScript. Requisitos para ello eran tambi�
 - SASS (Syntactically Awsome Style Sheets)
 - JavaScript
 - SweetAlert V2 (librería de alertas para JavaScript, https://sweetalert2.github.io/)
-- Servicio de hosting gratuito: Netlify (el sitio puede visualizarse en  https://mondswap.netlify.app)
 
 
 
